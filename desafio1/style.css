@@ -1,0 +1,20 @@
+body {
+    text-align: center;
+    background-color: rgb(154, 218, 220);
+}
+
+h1 {
+    font-size: 6rem;
+    font-variant: small-caps;
+}
+
+h2 {
+    font-size: 4rem;
+    color: red;
+    text-shadow: 3px 4px 7px rgb(99, 99, 99);
+}
+
+span {
+    color: yellow;
+    text-shadow: 3px 3px 5px black;
+}
