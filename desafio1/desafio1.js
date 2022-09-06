@@ -20,18 +20,18 @@ class Usuario {
     }
 
     addLibros(titulo, autor) {
-        let libro = {titulo, autor};
+        const libro = {titulo, autor};
         this.libros.push(libro);
     }
 
     getBookName() {
-        let nombresLibro = this.libros.map((libro) => libro.titulo);
+        const nombresLibro = this.libros.map((libro) => libro.titulo);
         return nombresLibro;
     }
 };
 
 
-let usuario1 = new Usuario('Ernesto', 'Londero');
+const usuario1 = new Usuario('Ernesto', 'Londero');
 
 // agregar
 usuario1.addMascota('Elvis');
