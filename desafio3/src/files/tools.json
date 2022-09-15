@@ -1,0 +1,20 @@
+[
+	{
+        "name": "Escuadra",
+        "price": 123.45,
+        "type": "reglas",
+        "id": 1
+    },
+    {
+        "name": "Calculadora",
+        "price": 234.56,
+        "type": "artículos",
+        "id": 2
+    },
+    {
+        "name": "Globo Terráqueo",
+        "price": 345.67,
+        "type": "artículos",
+        "id": 3
+    }
+]
