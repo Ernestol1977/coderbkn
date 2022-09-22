@@ -1,0 +1,21 @@
+POST http://localhost:8080/api/productos/ HTTP/1.1
+Content-Type: application/json
+
+{
+    "nombre": "resma oficio",
+    "precio": "800",
+    "Foto URL": "https://www.google.com/search?q=resma+a4&tbm=isch&ved=2ahUKEwiSqL_8uan6AhVgqZUCHVrBB50Q2-cCegQIABAA&oq=resma+a4&gs_lcp=CgNpbWcQAzIFCAAQgAQyBQgAEIAEMgUIABCABDIFCAAQgAQyBQgAEIAEMgUIABCABDIFCAAQgAQyBQgAEIAEMgUIABCABDIFCAAQgAQ6BwgAELEDEEM6BAgAEEM6CAgAEIAEELEDUMgKWLQbYKQcaABwAHgAgAFCiAGzBJIBATmYAQCgAQGqAQtnd3Mtd2l6LWltZ8ABAQ&sclient=img&ei=ROIsY5L2FuDS1sQP2oKf6Ak#imgrc=XnpuwoPjXuHsuM"
+}
+
+#### get
+GET http://localhost:8080/api/productos/ HTTP/1.1
+
+### put
+PUT http://localhost:8080/api/productos/ HTTP/1.1
+
+{
+    "nombre": "resma carta",
+    "precio": "550",
+    "Foto URL": "",
+    "id": 3
+},
