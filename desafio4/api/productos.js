@@ -9,7 +9,7 @@ class  ApiProductos {
     }
 
     verPorId(id) {
-        const prod = this.productos.find(prod => prod.id === id);
+        const prod = this.productos.find((prod) => prod.id == id);
         return prod || {error: 'producto no encontrado'};
     }
 
@@ -21,7 +21,7 @@ class  ApiProductos {
 
     actualizarId (prod, id) {
         const newProd = {id: parseInt(id), ... prod};
-        const index = this.productos.findIndex((p) => p.id === id);
+        const index = this.productos.findIndex((p) => p.id == id);
         if (index !== -1) {
             this.productos[index] = newProd;
             return newProd;
@@ -32,9 +32,10 @@ class  ApiProductos {
 
     borrarId (prod, id) {
         const newProd = {id: parseInt(id), ... prod};
-        const index = this.productos.findIndex(p => p.id === id);
+        const index = this.productos.findIndex(p => p.id == id);
         if (index !== -1) {
             this.productos.splice(index,1);
+            return newProd
         } else {
             console.log('El producto con ese id no se ha encontrado');
         }
