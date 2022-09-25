@@ -3,29 +3,33 @@ const express = require('express');
 const ApiProductos = require('./api/productos.js');
 const {Router} = express;
 const router = Router();
-const product = require('./api/productos.js')
 
 const apiProductos = new ApiProductos();
 
 
 router.get('/', (req,res) => {
-    res.json(apiProductos.verTodos())
+    let product = apiProductos.verTodos()
+    res.json(product)
 })
 
 router.get('/:id', (req,res) => {
-    res.json(apiProductos.verPorId(req.params.id))
+    let product = apiProductos.verPorId(req.params.id)
+    res.json(product)
 })
 
 router.post('/', (req,res) => {
-    res.json(apiProductos.guardarProducto(req.body))
+    let product = apiProductos.guardarProducto(req.body)
+    res.json(product)
 })    
 
 router.put('/:id', (req,res) => {
-    res.json(apiProductos.actualizarId(req.body, req.params.id))
+    let product = apiProductos.actualizarId(req.body, req.params.id)
+    res.json(product)
 })
 
 router.delete('/:id', (req,res) => {
-    res.json(apiProductos.borrarId(req.params.id))
+    let product = apiProductos.borrarId(req.params.id)
+    res.json(product)
 })
 
 module.exports = router;

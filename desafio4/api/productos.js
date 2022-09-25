@@ -5,7 +5,7 @@ class  ApiProductos {
     }
 
     verTodos() {
-        return [... this.productos];
+        return [...this.productos];
     }
 
     verPorId(id) {
@@ -20,7 +20,7 @@ class  ApiProductos {
     }
 
     actualizarId (prod, id) {
-        const newProd = {id: parseInt(id), ... prod};
+        const newProd = {id: parseInt(id), ...prod};
         const index = this.productos.findIndex((p) => p.id == id);
         if (index !== -1) {
             this.productos[index] = newProd;
@@ -30,14 +30,13 @@ class  ApiProductos {
         }
     }
 
-    borrarId (prod, id) {
-        const newProd = {id: parseInt(id), ... prod};
-        const index = this.productos.findIndex(p => p.id == id);
+    borrarId (id) {
+        const index = this.productos.findIndex((p) => p.id == parseInt(id));
         if (index !== -1) {
             this.productos.splice(index,1);
-            return newProd
+            return (`Producto con id ${id} fue eliminado exitosamente`)
         } else {
-            console.log('El producto con ese id no se ha encontrado');
+            return ('El producto con ese id no se ha encontrado');
         }
     }
 }
